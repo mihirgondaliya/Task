@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        android:elevation="4dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="9dp"
+            android:paddingHorizontal="13dp">
+
+            <com.netclan.task.controls.TextRegular
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textSize="11sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"/>
+
+            <com.netclan.task.controls.TextMedium
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mihir"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="35dp"/>
+
+            <com.netclan.task.controls.TextRegular
+                android:id="@+id/tvLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bengaluru"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp"
+                android:singleLine="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="35dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                android:elevation="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="55dp"
+                android:layout_marginStart="35dp">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progress="50"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.netclan.task.controls.TextMedium
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mihir"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="12dp"/>
+
+            <com.netclan.task.controls.TextRegular
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mihir"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp">
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/trail_1"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

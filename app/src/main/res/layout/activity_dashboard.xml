@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DashboardActivity">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/mainToolbar"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/lightColorPrimary"
+        android:elevation="3dp">
+        <com.netclan.task.controls.CustomTabLayout
+            android:id="@+id/tabType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/tab_txt"
+            android:background="@android:color/transparent"
+            app:tabBackground="@android:color/transparent"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorHeight="1.5dp"
+            app:tabIndicatorColor="@color/white"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="36dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardElevation="5dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="20dp">
+            <com.netclan.task.controls.EditRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:backgroundTint="@android:color/transparent"
+                android:drawablePadding="7dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:src="@drawable/filter"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="5dp"
+            android:paddingVertical="4dp"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
